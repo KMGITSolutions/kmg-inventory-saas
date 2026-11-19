@@ -1,33 +1,37 @@
+import Sidebar from "../../components/Sidebar";
+
 export default function DashboardPage() {
   return (
-    <main className="min-h-screen bg-slate-100 p-6">
-      <h1 className="text-3xl font-bold mb-6">
-        KMG Dashboard
-      </h1>
+    <div className="flex">
+      <Sidebar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <main className="flex-1 p-6 bg-slate-100 min-h-screen">
+        <h1 className="text-3xl font-bold mb-6">
+          KMG Dashboard
+        </h1>
 
-        <div className="bg-white p-5 rounded-lg shadow">
-          <h2 className="font-semibold">Total Products</h2>
-          <p className="text-3xl font-bold">120</p>
+        <div className="grid grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-lg shadow">
+            <h2>Total Products</h2>
+            <p className="text-3xl font-bold">120</p>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow">
+            <h2>Today's Sales</h2>
+            <p className="text-3xl font-bold">15000</p>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow">
+            <h2>Low Stock</h2>
+            <p className="text-3xl font-bold">5</p>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow">
+            <h2>Customers</h2>
+            <p className="text-3xl font-bold">89</p>
+          </div>
         </div>
-
-        <div className="bg-white p-5 rounded-lg shadow">
-          <h2 className="font-semibold">Today's Sales</h2>
-          <p className="text-3xl font-bold">15000</p>
-        </div>
-
-        <div className="bg-white p-5 rounded-lg shadow">
-          <h2 className="font-semibold">Low Stock</h2>
-          <p className="text-3xl font-bold">5</p>
-        </div>
-
-        <div className="bg-white p-5 rounded-lg shadow">
-          <h2 className="font-semibold">Customers</h2>
-          <p className="text-3xl font-bold">89</p>
-        </div>
-
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
